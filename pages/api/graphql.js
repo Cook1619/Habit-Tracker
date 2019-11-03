@@ -9,17 +9,17 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     sayHello: () => {
-      return "Hello World!"
+      return 'Hello Level Up!';
     }
   }
-}
+};
 
-const apolloServer =  new ApolloServer({ typeDefs, resolvers });
+const apolloServer = new ApolloServer({ typeDefs, resolvers });
 
 export const config = {
   api: {
     bodyParser: false
   }
-}
+};
 
 export default apolloServer.createHandler({ path: '/api/graphql' });
